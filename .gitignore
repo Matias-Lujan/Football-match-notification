@@ -60,3 +60,6 @@ Thumbs.db
 
 # Docker
 .dockerignore
+
+# Ignorar archivos específicos
+src/test.js

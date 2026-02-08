@@ -12,6 +12,12 @@ class MatchFilter {
     if (this.isLaLigaImportantMatch(leagueId, homeTeam, awayTeam)) {
       return true;
     }
+    if (this.isArgentinaPrimeraDivisionImportantMatch(leagueId, homeTeam, awayTeam)) {
+      return true;
+    }
+    if (this.isCopaLibertadoresImportantMatch(fixture)) {
+      return true;
+    }
     if (this.isChampionsLeagueImportantMatch(fixture)) {
       return true;
     }
@@ -32,6 +38,44 @@ class MatchFilter {
       config.importantTeams.LA_LIGA.includes(homeTeam) &&
       config.importantTeams.LA_LIGA.includes(awayTeam)
     );
+  }
+
+  isArgentinaPrimeraDivisionImportantMatch(leagueId, homeTeam, awayTeam) {
+    return (
+      leagueId === config.leagues.ARGENTINA_PRIMERA_DIVISION &&
+      config.importantTeams.ARGENTINA_PRIMERA_DIVISION.includes(homeTeam) &&
+      config.importantTeams.ARGENTINA_PRIMERA_DIVISION.includes(awayTeam)
+    );
+  }
+
+  isCopaLibertadoresImportantMatch(fixture) {
+    const leagueId = fixture.league.id;
+    const homeTeam = fixture.teams.home.name;
+    const awayTeam = fixture.teams.away.name;
+    const round = fixture.league.round.toLowerCase();
+
+    if (leagueId !== config.leagues.COPA_LIBERTADORES) return false;
+    const [bocaJuniors, , , , , ,] = config.importantTeams.ARGENTINA_PRIMERA_DIVISION;
+
+    if (
+      homeTeam.toLowerCase() === bocaJuniors.toLowerCase() ||
+      awayTeam.toLowerCase() === bocaJuniors.toLowerCase()
+    ) {
+      return true;
+    }
+
+    const [, , , semiFinal, final] = config.COPA_LIBERTADORES_KNOCKOUT_ROUNDS;
+
+    if (
+      (round.includes(semiFinal.toLocaleLowerCase()) ||
+        round.includes(final.toLocaleLowerCase())) &&
+      config.importantTeams.ARGENTINA_PRIMERA_DIVISION.includes(homeTeam) &&
+      config.importantTeams.ARGENTINA_PRIMERA_DIVISION.includes(awayTeam)
+    ) {
+      return true;
+    }
+
+    return false;
   }
 
   isChampionsLeagueImportantMatch(fixture) {

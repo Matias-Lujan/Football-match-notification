@@ -20,6 +20,8 @@ export const config = {
     CHAMPIONS_LEAGUE: 2,
     FA_CUP: 45,
     COPA_DEL_REY: 143,
+    COPA_LIBERTADORES: 13,
+    ARGENTINA_PRIMERA_DIVISION: 128
   },
 
   // Equipos importantes por liga
@@ -57,6 +59,16 @@ export const config = {
       'Inter',
       'AC Milan'
     ],
+
+    ARGENTINA_PRIMERA_DIVISION: [
+      'Boca Juniors',
+      'River Plate',
+      'Racing Club',
+      'Independiente',
+      'San Lorenzo',
+      'Velez Sarsfield',
+      'Estudiantes'
+    ],
   },
 
   CHAMPIONS_LEAGUE_KNOCKOUT_ROUNDS: [
@@ -65,6 +77,14 @@ export const config = {
     'Semi-finals',
     'Final',
     ],
+
+  COPA_LIBERTADORES_KNOCKOUT_ROUNDS: [
+    'Round of 16',
+    'Quarter-finals',
+    'Semi-finals',
+    'Final',
+  ],
+    
 };
 
 if (!API_FOOTBALL_KEY || !TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
