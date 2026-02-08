@@ -126,10 +126,13 @@ class MatchFilter {
       awayTeam: fixture.teams.away.name,
       league: fixture.league.name,
       round: fixture.league.round,
-      date: date.toLocaleDateString('es-AR'),
+      date: date.toLocaleDateString('es-AR', {
+        timeZone: 'America/Argentina/Buenos_Aires',
+      }),
       time: date.toLocaleTimeString('es-AR', {
         hour: '2-digit',
         minute: '2-digit',
+        timeZone: 'America/Argentina/Buenos_Aires',
       }),
     };
   }
