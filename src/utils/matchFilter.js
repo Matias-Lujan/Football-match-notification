@@ -20,7 +20,7 @@ class MatchFilter {
 
   isPremierLeagueImportantMatch(leagueId, homeTeam, awayTeam) {
     return (
-      leagueId === config.leagues.PREMIER_LEAGUE &&
+      (leagueId === config.leagues.PREMIER_LEAGUE || leagueId === config.leagues.FA_CUP) &&
       config.importantTeams.PREMIER_LEAGUE.includes(homeTeam) &&
       config.importantTeams.PREMIER_LEAGUE.includes(awayTeam)
     );
@@ -28,7 +28,7 @@ class MatchFilter {
 
   isLaLigaImportantMatch(leagueId, homeTeam, awayTeam) {
     return (
-      leagueId === config.leagues.LA_LIGA &&
+      (leagueId === config.leagues.LA_LIGA || leagueId === config.leagues.COPA_DEL_REY) &&
       config.importantTeams.LA_LIGA.includes(homeTeam) &&
       config.importantTeams.LA_LIGA.includes(awayTeam)
     );

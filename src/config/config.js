@@ -18,6 +18,8 @@ export const config = {
     PREMIER_LEAGUE: 39,
     LA_LIGA: 140,
     CHAMPIONS_LEAGUE: 2,
+    FA_CUP: 45,
+    COPA_DEL_REY: 143,
   },
 
   // Equipos importantes por liga

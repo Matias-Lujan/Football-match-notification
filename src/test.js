@@ -5,7 +5,7 @@ import TelegramBot from 'node-telegram-bot-api';
 
 dotenv.config();
 
-const response = await axios.get('https://v3.football.api-sports.io/fixtures?date=2026-02-06', {
+const response = await axios.get('https://v3.football.api-sports.io/leagues?id=143', {
   headers: { 'x-apisports-key': config.API_FOOTBALL_KEY },
 });
 
