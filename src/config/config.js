@@ -66,8 +66,7 @@ export const config = {
       'Racing Club',
       'Independiente',
       'San Lorenzo',
-      'Velez Sarsfield',
-      'Estudiantes'
+      'Velez Sarsfield'
     ],
   },
 
