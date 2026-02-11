@@ -25,7 +25,8 @@ class TelegramService {
           `${index + 1}. ${match.homeTeam} vs ${match.awayTeam}\n` +
           `   📍 ${match.league}\n` +
           `   📅 ${match.date}\n` +
-          `   🕐 ${match.time}\n`
+          `   🕐 ${match.time}\n` +
+          `   🏆 ${match.round}\n`
         );
       })
       .join('\n');
