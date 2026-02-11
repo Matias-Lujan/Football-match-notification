@@ -64,7 +64,7 @@ class MatchFilter {
       return true;
     }
 
-    const [, , , semiFinal, final] = config.COPA_LIBERTADORES_KNOCKOUT_ROUNDS;
+    const [, , semiFinal, final] = config.COPA_LIBERTADORES_KNOCKOUT_ROUNDS;
 
     if (
       (round.includes(semiFinal.toLocaleLowerCase()) ||
