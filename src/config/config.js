@@ -54,7 +54,7 @@ export const config = {
       'Atletico Madrid',
       'Bayern Munich',
       'Borussia Dortmund',
-      'PSG',
+      'Paris Saint Germain',
       'Juventus',
       'Inter',
       'AC Milan'
