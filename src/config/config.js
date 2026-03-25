@@ -19,6 +19,7 @@ export const config = {
     LA_LIGA: 140,
     CHAMPIONS_LEAGUE: 2,
     FA_CUP: 45,
+    EFL_CUP: 81,
     COPA_DEL_REY: 143,
     COPA_LIBERTADORES: 13,
     ARGENTINA_PRIMERA_DIVISION: 128
