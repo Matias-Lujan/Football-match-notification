@@ -55,7 +55,7 @@ class MatchFilter {
     const round = fixture.league.round.toLowerCase();
 
     if (leagueId !== config.leagues.COPA_LIBERTADORES) return false;
-    const [bocaJuniors, , , , , ,] = config.importantTeams.ARGENTINA_PRIMERA_DIVISION;
+    const [bocaJuniors, , , , , ] = config.importantTeams.ARGENTINA_PRIMERA_DIVISION;
 
     if (
       homeTeam.toLowerCase() === bocaJuniors.toLowerCase() ||
